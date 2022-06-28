@@ -1,0 +1,29 @@
+import java.util.*;
+import java.text.SimpleDateFormat;
+class DateAndTime
+{
+	public static void main(String args[])
+	{
+		Calendar calendar = Calendar.getInstance();
+		Scanner sc = new Scanner(System.in);
+		Date date = new Date();
+		SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println("\nyyyy-MM-dd format:\n"+simpleDateFormat1.format(date));
+		SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println("\ndd/MM/yyyy format:\n"+simpleDateFormat2.format(date));
+		SimpleDateFormat simpleDateFormat3 = new SimpleDateFormat("dd-MMM-yyyy");
+		System.out.println("\ndd-MMM-yyyy format:\n"+simpleDateFormat3.format(date));
+		SimpleDateFormat simpleDateFormat4 = new SimpleDateFormat("E, MMM dd yyyy");
+		System.out.println("\nE, MMM dd yyyy format:\n"+simpleDateFormat4.format(date));
+		System.out.println("\nDate this instance is:\n"+calendar.getTime());
+		calendar.add(Calendar.DATE, 2);
+		calendar.add(Calendar.MONTH, 1);
+		calendar.add(Calendar.YEAR, 4);
+		System.out.println("\nDate after adding a month, 2 days, 4 years will be:\n"+calendar.getTime());
+		Calendar calendar1 = Calendar.getInstance();
+		calendar1.add(Calendar.DATE, -2);
+		calendar1.add(Calendar.MONTH, -1);
+		calendar1.add(Calendar.YEAR, -4);
+		System.out.println("\nDate after subtracting a month, 2 days, 4 years will be\n"+calendar1.getTime());
+	}
+}
