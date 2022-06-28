@@ -1,0 +1,14 @@
+import java.util.*;
+class ReverseString
+{
+	public static void main(String args[])
+	{
+		String str;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the element you want in reverse:\n");
+		str = sc.nextLine();
+		StringBuffer str1 = new StringBuffer(str);
+		str1.reverse();
+		System.out.println("\nYour element after reversing is:\n"+str1);
+	}
+}
