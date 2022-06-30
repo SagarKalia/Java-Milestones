@@ -1,0 +1,39 @@
+import java.util.*;
+class Diamond
+{
+	public static void main(String args[])
+	{
+		int n, pointer = 1, i, j;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of rows:");
+		n = sc.nextInt();
+		pointer = n-1;
+		for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=pointer;j++)
+			{
+            System.out.print(" "); 
+			}
+			pointer--;
+			for(j=1;j<=2*i-1;j++)
+			{
+            System.out.print("*"); 
+			}
+			System.out.println("");
+        }
+		pointer = 1;
+		for(i=1;i<=n-1;i++)
+        {
+			for(j=1;j<=pointer;j++)
+			{
+            System.out.print(" "); 
+			}
+			pointer++;
+			for(j=1;j<=2*(n-i)-1;j++)
+			{
+            System.out.print("*"); 
+			}
+			System.out.println("");
+        }
+	}
+}
