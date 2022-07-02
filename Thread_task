@@ -2,7 +2,7 @@ class A extends Thread {
 
     public void run() {
         String name = Thread.currentThread().getName();
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 0; i < 5; i++) {
 
             System.out.println(name);
 
@@ -20,7 +20,7 @@ class B extends Thread {
 
     public void run() {
         String name = Thread.currentThread().getName();
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 0; i < 5; i++) {
 
             System.out.println(name);
 
